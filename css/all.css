@@ -50,7 +50,7 @@ table {
     box-sizing: border-box;
 }
 img{
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 a{
@@ -60,6 +60,7 @@ a{
 }
 body{
 	line-height: 1.3;
+	
 }
 
 /* css reset */
@@ -140,11 +141,13 @@ h1 a:hover{
 }
 .feature-introduce{
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-between;
 }
 .feature-introduce li{
-	width: 23%;
-	margin: 0 5%;
+	width: 30%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 .feature-introduce img{
 	border-radius: 50%;
@@ -157,17 +160,19 @@ h5{
 /* chef */
 .chef{
 	display: flex;
+	align-items: center;
 	background: #3D1101;
 	color: #fff;
-	
 }
 .chef img{
-	margin-left: 42px;
-	object-fit: contain;
+	margin: 0 25px;
+	width: 470px;
+	height: 460px;
 }
 .chef-introduce{
-	margin:  80px 77px 80px 25px ;
+	width: 410px;
 }
+
 .chef-introduce h4{
 	font-size: 20px;
 }
@@ -176,6 +181,7 @@ h5{
 		display: none;
 	}
 	.chef-introduce{
-		
+		width: 100%;
+		padding: 25px;
 	}
 }
