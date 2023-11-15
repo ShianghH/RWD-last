@@ -154,3 +154,28 @@ h5{
 	margin: 20px 0 10px;
 	text-align: center;
 }
+/* chef */
+.chef{
+	display: flex;
+	background: #3D1101;
+	color: #fff;
+	
+}
+.chef img{
+	margin-left: 42px;
+	object-fit: contain;
+}
+.chef-introduce{
+	margin:  80px 77px 80px 25px ;
+}
+.chef-introduce h4{
+	font-size: 20px;
+}
+@media(max-width:768px){
+	.chef img{
+		display: none;
+	}
+	.chef-introduce{
+		
+	}
+}
