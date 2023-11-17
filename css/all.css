@@ -76,23 +76,22 @@ body{
 	background: rgba(0, 0, 0, 0.6);
 	position: absolute;
 	width: 100%;
-	
+	padding: 16px 40px ;	
 }
 h1 a{
-	font-size: 24px;
-	padding: 16px 42px;
-	font-weight: bold;
+	background-image: url(..//img/logo_w@svg.svg);
+	background-repeat: no-repeat;
+	text-indent: 101%;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 120px;
+	height: 24px;
 }
-h1 a:hover{
-	color: #929292;
-}
-
 .menu{
 	display: flex;
-	align-items: center;
 }
 .menu a{
-	padding: 18px 30px;
+	padding: 0px 30px;
 }
 .menu a:hover{
 	background-color: #929292;
@@ -116,12 +115,12 @@ h1 a:hover{
 	background: rgba(0, 0, 0, 0.6);
 	padding: 20px;
 }
-.banner-text h2{
+.banner-text h3{
 	font-size: 36px;
 	margin: 20px 0 16px;
 }
 /* feature頁 */
-.feature,.feedback,.contact{
+.feature,.feedback,.contact,.footer{
 	background: #efe9e7;
 	padding: 50px;
 	color: #3D1101;
@@ -131,7 +130,7 @@ h1 a:hover{
 	align-items: baseline;
 	justify-content: center;
 }
-h3{
+h4{
 	font-size: 20px;
 	text-align: center;
 	margin-bottom: 31px;	
@@ -189,8 +188,8 @@ h5{
 		padding: 25px;
 	}
 }
-/* feedback */
-.feedback h3,.contact h3{
+/* feedback 回饋*/
+.feedback h4,.contact h4{
 	font-size: 24px;
 }
 .container,.container li{
@@ -213,7 +212,7 @@ h5{
 	display: block;
 	text-align: right;
 }
-/* contact */
+/* contact 聯繫資訊*/
 .contact{
 	background: #FAFAFA;
 }
@@ -230,6 +229,14 @@ label{
 .contact .information form input{
 	margin-bottom: 10px;
 }
+/* raio */
+.radio{
+	margin-top: 8px;
+}
+.radio-no{
+	margin-left: 35px;
+}
+/* 送出取消按鈕 */
 .btn{
 	text-align: end;
 	margin-top: 25px;
@@ -243,4 +250,39 @@ label{
 	background: #F56C23;
 	border-radius: 3px;
 	margin-left: 10px;
+}
+/* footer表尾 */
+.footer{
+	display: flex;
+	justify-content: space-between;
+}
+.about{
+	display: flex;
+	
+	width: 50%;
+}
+
+.about p,.address{
+	margin-top: 16px;
+}
+.address li{
+	list-style: disc;
+	list-style-position: inside;
+}
+h2{
+	background-image: url(..//img/logo_l@svg.svg);
+	background-repeat: no-repeat;
+	text-indent: 101%;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 245px;
+	height: 49px;
+	margin-bottom: 44px;
+}
+.logo{
+	display: flex;
+	justify-content: end;
+}
+i{
+	margin-left: 12px;
 }
