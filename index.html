@@ -101,20 +101,27 @@
             <h3>我們的位置不太夠坐<br>要不要先定位呢？</h3>
             <div class="information">
                 <img src="img/Map.png" alt="map">
-                <form action="" class="pure-form pure-form-stacked">
+                <form action="" class="pure-form pure-form-stacked ">
                     <label for="">姓名</label>
-                    <input type="text" >
+                    <input class="pure-input-1" type="text"  placeholder="六角講師吃尾牙">
                     <label for="">電話</label>
-                    <input type="tel">
+                    <input class="pure-input-1" type="tel" placeholder="02-1234567">
                     <label for="">信箱</label>
-                    <input type="email">
+                    <input class="pure-input-1" type="email" placeholder="test@gmail.com" >
                     <label for="">人數</label>
-                    <input type="number">
+                    <input class="pure-input-1" type="number" >
                     <label for="">是否需要素食</label>
-                    <input type="radio">是
-                    <input type="radio">否
-                    <button type="submit" class="pure-button pure-button-primary">取消</button>
-                    <button type="submit" class="pure-button pure-button-primary">送出</button>
+                    <div class="radio">
+                        <label for="">是</label>
+                        <input type="radio" checked>
+                        <label for="">否</label>
+                        <input type="radio">
+                    </div>
+                    <div class="btn">
+                        <button type="submit" class="pure-button pure-button-primary btn-cancle">取消</button>
+                        <button type="submit" class="pure-button pure-button-primary btn-send">送出</button>
+                    </div>
+                    
                 </form>
             </div>
         </div>

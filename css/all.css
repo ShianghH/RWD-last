@@ -60,7 +60,7 @@ a{
 }
 body{
 	line-height: 1.3;
-	
+	font-family: 微軟正黑體, Arial, Helvetica, sans-serif;
 }
 
 /* css reset */
@@ -222,4 +222,25 @@ h5{
 }
 form{
 	margin-left: 20px;
+	width: 50%;
+}
+label{
+	font-size: 14px;
+}
+.contact .information form input{
+	margin-bottom: 10px;
+}
+.btn{
+	text-align: end;
+	margin-top: 25px;
+	font-size: 14px;
+}
+.btn-cancle{
+	background: rgba(0,0,0,0.35);
+	border-radius: 3px;
+}
+.btn-send{
+	background: #F56C23;
+	border-radius: 3px;
+	margin-left: 10px;
 }
