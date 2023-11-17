@@ -257,18 +257,26 @@ label{
 	justify-content: space-between;
 }
 .about{
-	display: flex;
-	
+	display: flex;	
+}
+.about >li{
+	padding: 5px;
 	width: 50%;
+	
 }
 
 .about p,.address{
 	margin-top: 16px;
 }
+.about h5{
+	text-align: left;
+}
 .address li{
 	list-style: disc;
 	list-style-position: inside;
+		
 }
+
 h2{
 	background-image: url(..//img/logo_l@svg.svg);
 	background-repeat: no-repeat;
