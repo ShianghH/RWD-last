@@ -78,6 +78,7 @@ body{
 	position: fixed;	
 	width: 100%;
 	max-width: 1024px;
+	padding: 20px 30px;
 }
 h1 a{
 	background-image: url(..//img/logo_w@svg.svg);
@@ -93,7 +94,7 @@ h1 a{
 	display: flex;
 }
 .menu a{
-	padding: 20px 30px;
+	padding: 0 30px;
 }
 .menu a:hover{
 	background-color: #929292;
@@ -107,15 +108,18 @@ h1 a{
 		max-height: 0px;
 		overflow: hidden;
 		position: absolute;
-		top: 41px; /* top41為hreader高度 */
+		top: 64px; /* top64為hreader高度 */
 		background: rgba(0, 0, 0, 0.6);
 		flex-direction: column;
 		width: 100%;
+		left: 0;
 		text-align: center;
 		transition:  1s;
 	}
+	.menu a{
+		padding: 20px;
+	}
 	.mobile-link{
-		padding: 20px 30px;
 		display: block;
 	}
 	.show .menu{
@@ -191,8 +195,29 @@ i{
 	.link{
 		position: absolute;
 		right: 40;
-		bottom: 50;
+		bottom: 66;
 	}
+}
+@media(max-width:576px){
+	.footer{
+		flex-direction: column;
+	}
+	.about li{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+	.link{
+		position: static;
+	}
+	h2{
+		margin: 0 auto;
+	}
+	.logo{
+		justify-content: center;
+		margin-top: 30px;
+	}
+
 }
 /* layout布局 ↑------------*/
 
@@ -335,11 +360,11 @@ h5{
 	width: 50%;
 	object-fit: cover;
 }
-form{
+.information form{
 	margin-left: 20px;
 	width: 50%;
 }
-label{
+.information label{
 	font-size: 14px;
 }
 .contact .information form input{
@@ -384,3 +409,50 @@ label{
 }
 
 /* login-index */
+.login{
+	background-color: #efe9e7;
+	padding: 50px 0 5px 0;
+	color: #3D1101;
+}
+.login h2{
+	margin: 0 auto;
+}
+.login span{
+	display: block;
+	text-align: center;
+	margin: 5px 0 35px;
+	font-weight: bold;
+	font-size: 20px;
+}
+.login-form{
+	border-top: 3px solid #FF5E45;
+	max-width: 300px;
+	margin: 0 auto;
+	padding: 15px;
+	background: #EFE9E7;
+    box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.16);
+}
+.login-form h6{
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+}
+.login-form input{
+	width: 100%;
+}
+.login .login-form .login-email{
+	margin-bottom: 15px;
+}
+.login-form a{
+	color: #F56C23;
+	font-size: 14px;
+	margin-bottom: 30px;
+}
+.btn-register{
+	background-color: #929292;
+	width: 49%;
+}
+.btn-login{
+	background-color: #F56C23;
+	width: 49%;
+}
