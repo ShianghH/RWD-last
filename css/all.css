@@ -149,6 +149,11 @@ h1 a{
 	font-size: 36px;
 	margin: 20px 0 16px;
 }
+@media(max-width:576px){
+	.banner{
+		background-image: url(..//img/header_mobile.png);
+	}
+}
 /* footer表尾 */
 .footer{
 	display: flex;
@@ -206,9 +211,9 @@ i{
 		width: 100%;
 		margin-bottom: 20px;
 	}
-
 	.link{
-		position: static;
+		position: static; 
+		/* 清除position */
 	}
 	h2{
 		margin: 0 auto;
@@ -217,7 +222,6 @@ i{
 		justify-content: center;
 		margin-top: 30px;
 	}
-
 }
 /* layout布局 ↑------------*/
 
@@ -263,7 +267,7 @@ h4{
 .feature-introduce img{
 	border-radius: 50%;
 }
-h5{
+.feature-introduce h5{
 	font-size: 18px;
 	margin: 20px 0 10px;
 	text-align: center;
@@ -408,7 +412,7 @@ h5{
 	margin-left: 10px;
 }
 
-/* login-index */
+/* login-index頁 */
 .login{
 	background-color: #efe9e7;
 	padding: 50px 0 5px 0;
@@ -455,4 +459,8 @@ h5{
 .btn-login{
 	background-color: #F56C23;
 	width: 49%;
+}
+/* order頁 */
+.order a{
+	color: #3D1101;
 }
