@@ -67,16 +67,16 @@ body{
 .wrap{
 	max-width: 1024px;
 	margin: 0 auto;
-	position: relative;
 }
 /* header  */
 .header{
 	display: flex;
 	justify-content: space-between;
 	background: rgba(0, 0, 0, 0.6);
-	position: absolute;
+	padding: 16px 40px ;
+	position: fixed;	
 	width: 100%;
-	padding: 16px 40px ;	
+	max-width: 1024px;
 }
 h1 a{
 	background-image: url(..//img/logo_w@svg.svg);
@@ -245,6 +245,7 @@ label{
 /* raio */
 .radio{
 	margin-top: 8px;
+	font-size: 14px;
 }
 .radio-no{
 	margin-left: 35px;
@@ -283,7 +284,6 @@ label{
 .about h5{
 	text-align: left;
 }
-
 h2{
 	background-image: url(..//img/logo_l@svg.svg);
 	background-repeat: no-repeat;
@@ -300,4 +300,17 @@ h2{
 }
 i{
 	margin-left: 12px;
+}
+@media(max-width:768px){
+	.footer{
+		position: relative;
+	}
+	.about{
+		flex-wrap: wrap;
+	}
+	.link{
+		position: absolute;
+		right: 40;
+		bottom: 50;
+	}
 }
