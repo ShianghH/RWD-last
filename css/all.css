@@ -63,7 +63,8 @@ body{
 	font-family: 微軟正黑體, Arial, Helvetica, sans-serif;
 }
 
-/* css reset */
+/* css reset ↑*/
+/* layout布局 ↓------------*/
 .wrap{
 	max-width: 1024px;
 	margin: 0 auto;
@@ -72,8 +73,8 @@ body{
 .header{
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	background: rgba(0, 0, 0, 0.6);
-	padding: 16px 40px ;
 	position: fixed;	
 	width: 100%;
 	max-width: 1024px;
@@ -86,15 +87,40 @@ h1 a{
 	white-space: nowrap;
 	width: 120px;
 	height: 24px;
+	margin-left: 10px;
 }
 .menu{
 	display: flex;
 }
 .menu a{
-	padding: 0px 30px;
+	padding: 20px 30px;
 }
 .menu a:hover{
 	background-color: #929292;
+}
+.mobile-link{
+	display: none;
+}
+
+@media(max-width:576px){
+	.menu{
+		max-height: 0px;
+		overflow: hidden;
+		position: absolute;
+		top: 41px;
+		background: rgba(0, 0, 0, 0.6);
+		flex-direction: column;
+		width: 100%;
+		text-align: center;
+		transition:  1s;
+	}
+	.mobile-link{
+		padding: 20px 30px;
+		display: block;
+	}
+	.show .menu{
+		max-height: 500px;
+	}
 }
 /* banner背景以及文字 */
 .banner{
@@ -119,7 +145,58 @@ h1 a{
 	font-size: 36px;
 	margin: 20px 0 16px;
 }
-/* 各區塊留距 */
+/* footer表尾 */
+.footer{
+	display: flex;
+	justify-content: space-between;
+	padding: 50px 40px;
+}
+.about{
+	display: flex;	
+}
+.about >li{
+	width: 50%;
+	margin-right: 10px;
+}
+.about p,.address{
+	margin-top: 16px;
+}
+.about h5{
+	text-align: left;
+}
+h2{
+	background-image: url(..//img/logo_l@svg.svg);
+	background-repeat: no-repeat;
+	text-indent: 101%;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 245px;
+	height: 49px;
+	margin-bottom: 44px;
+}
+.logo{
+	display: flex;
+	justify-content: end;
+}
+i{
+	margin-left: 12px;
+}
+@media(max-width:768px){
+	.footer{
+		position: relative;
+	}
+	.about{
+		flex-wrap: wrap;
+	}
+	.link{
+		position: absolute;
+		right: 40;
+		bottom: 50;
+	}
+}
+/* layout布局 ↑------------*/
+
+/* index */
 .feedback,.contact,.footer{
 	background: #efe9e7;
 	padding: 50px 40px;
@@ -220,7 +297,7 @@ h5{
 	display: block;
 	text-align: right;
 }
-/* contact 聯繫資訊*/
+/* contact */
 .contact{
 	background: #FAFAFA;
 	padding: 50px 40px;
@@ -265,52 +342,5 @@ label{
 	border-radius: 3px;
 	margin-left: 10px;
 }
-/* footer表尾 */
-.footer{
-	display: flex;
-	justify-content: space-between;
-	padding: 50px 40px;
-}
-.about{
-	display: flex;	
-}
-.about >li{
-	width: 50%;
-	margin-right: 10px;
-}
-.about p,.address{
-	margin-top: 16px;
-}
-.about h5{
-	text-align: left;
-}
-h2{
-	background-image: url(..//img/logo_l@svg.svg);
-	background-repeat: no-repeat;
-	text-indent: 101%;
-	overflow: hidden;
-	white-space: nowrap;
-	width: 245px;
-	height: 49px;
-	margin-bottom: 44px;
-}
-.logo{
-	display: flex;
-	justify-content: end;
-}
-i{
-	margin-left: 12px;
-}
-@media(max-width:768px){
-	.footer{
-		position: relative;
-	}
-	.about{
-		flex-wrap: wrap;
-	}
-	.link{
-		position: absolute;
-		right: 40;
-		bottom: 50;
-	}
-}
+
+/* login-index */
