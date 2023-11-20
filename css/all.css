@@ -536,6 +536,28 @@ h4{
 	border-radius: 3px;
     margin: 8px 10px;
 }
+/* 熱銷美食 */
+.hot-wrap{
+	overflow: hidden;
+	width: 70%;
+	height: 80px;
+	position: absolute;
+	top: -6px;
+	right:-6px
+}
+
+.hot-wrap .hot{
+	position: absolute;
+	top: 15px;
+	right: -30px;
+	transform: rotate(45deg);
+	width: 110px;
+	background-color: #0c9;
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+}
+
 /* 搜索條 */
 .search{
 	margin: 0 1%;
@@ -550,6 +572,7 @@ h4{
 	border: 2px solid #3D1101;
 	display: flex;
 }
+
 .search-bar{
 	width: 95%;
 	border: none;
@@ -558,17 +581,35 @@ h4{
 .search-btn{
 	background-color: #3D1101;
 	width: 40px;
-	
 }
 .search-btn i{
 	color: #fff;
 	font-size: 19px;
 	padding: 5px 0;
-	
 }
 /* 購物車 */
+.pay h6{
+	border-right: 1px solid #3D1101;
+	padding-right: 10px;
+}
+.pay a{
+	position: relative;
+}
 .pay i{
 	font-size: 27px;
+	
+}
+.pay span{
+	background: #ff0000;
+	border-radius: 50%;
+	display: block;
+	text-align: center;
+	color: #fff;
+	position: absolute;
+	top: -9px;
+	right: -5px;
+	width: 18px;
+	height: 18px;
 }
 
 
