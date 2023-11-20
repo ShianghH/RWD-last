@@ -75,7 +75,8 @@ body{
 	justify-content: space-between;
 	align-items: center;
 	background: rgba(0, 0, 0, 0.6);
-	position: fixed;	
+	position: fixed;
+	z-index: 999;	
 	width: 100%;
 	max-width: 1024px;
 	padding: 20px 30px;
@@ -90,7 +91,8 @@ h1 a{
 	height: 24px;
 	margin-left: 10px;
 }
-.menu{
+/* 表投menu,表尾about,聯繫contact */
+.menu,.abuout,.information{
 	display: flex;
 }
 .menu a{
@@ -114,7 +116,7 @@ h1 a{
 		width: 100%;
 		left: 0;
 		text-align: center;
-		transition:  1s;
+		transition: 1s;
 	}
 	.menu a{
 		padding: 20px;
@@ -155,12 +157,10 @@ h1 a{
 	}
 }
 /* footer表尾 */
-.footer{
+/* 表尾,featureur介紹,feedback容器 */
+.footer,.feature-introduce,.container,.container li{
 	display: flex;
 	justify-content: space-between;
-}
-.about{
-	display: flex;	
 }
 .about >li{
 	width: 50%;
@@ -186,7 +186,7 @@ h2{
 	display: flex;
 	justify-content: end;
 }
-i{
+.logo i{
 	margin-left: 12px;
 }
 @media(max-width:768px){
@@ -254,10 +254,6 @@ h4{
 	margin: 0 20px;
 	border: 1px solid #3D1101;
 }
-.feature-introduce{
-	display: flex;
-	justify-content: space-between;
-}
 .feature-introduce li{
 	width: 30%;
 	display: flex;
@@ -323,10 +319,6 @@ h4{
 .feedback h4,.contact h4{
 	font-size: 24px;
 }
-.container,.container li{
-	display: flex;
-	justify-content: space-between;
-}
 .container li{
 	width: 30%;
 	margin: 0 1%;
@@ -357,9 +349,6 @@ h4{
 	background: #FAFAFA;
 	padding: 50px 40px;
 }
-.information{
-	display: flex;
-}
 .information img{
 	width: 50%;
 	object-fit: cover;
@@ -374,20 +363,7 @@ h4{
 .contact .information form input{
 	margin-bottom: 10px;
 }
-@media(max-width:576px){
-	.information{
-		flex-direction: column;
-		align-items: center;
-	}
-	.information img{
-		width: 100%;
-		margin:30px 0;
-	}
-	form{
-		width: 100%;
-		margin: 0;
-	}
-}
+
 /* raio */
 .radio{
 	margin-top: 8px;
@@ -402,14 +378,28 @@ h4{
 	margin-top: 25px;
 	font-size: 14px;
 }
-.btn-cancle{
+.btn-cancle,.btn-send{
 	background: rgba(0,0,0,0.35);
 	border-radius: 3px;
-}
-.btn-send{
-	background: #F56C23;
-	border-radius: 3px;
 	margin-left: 10px;
+}
+.btn-cancle:hover,.btn-send:hover{
+	background: #F56C23;
+}
+
+@media(max-width:576px){
+	.information{
+		flex-direction: column;
+		align-items: center;
+	}
+	.information img{
+		width: 100%;
+		margin:30px 0;
+	}
+	form{
+		width: 100%;
+		margin: 0;
+	}
 }
 
 /* login-index頁 */
@@ -452,15 +442,17 @@ h4{
 	font-size: 14px;
 	margin-bottom: 30px;
 }
-.btn-register{
+.login-form a:hover{
+	font-weight: bold;
+}
+.btn-register,.btn-login{
 	background-color: #929292;
 	width: 49%;
 }
-.btn-login{
+.btn-register:hover,.btn-login:hover{
 	background-color: #F56C23;
-	width: 49%;
 }
-/* order頁 */
+/* order index */
 .order{
 	display: flex;
 	color: #3D1101;
@@ -512,7 +504,6 @@ h4{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	
 }
 .product-list li{
 	width: 30%;
@@ -527,6 +518,10 @@ h4{
 	top: 9;
 	left: 9;
 	font-size: 23px;
+	color: #fff;
+}
+.heart:hover{
+	color: red;
 }
 .product-list h5{
 	font-size: 20px;
@@ -549,9 +544,16 @@ h4{
 	width: 90%;
 	border: 2px solid #F56C23;
 	color: #F56C23;
-	padding: 3px ;
+	padding: 5px;
 	border-radius: 3px;
     margin: 8px 10px;
+}
+.product-list button:hover{
+	background-color: #F56C23;
+	color: #fff;
+}
+.product-list .cart{
+	margin-right: 5px;
 }
 @media(max-width:768px){
 	.product-list li{
@@ -566,7 +568,7 @@ h4{
 		width: 100%;
 	}
 }
-/* 熱銷美食 */
+/* ☆熱銷美食條 */
 .hot-wrap{
 	overflow: hidden;
 	width: 70%;
@@ -575,7 +577,6 @@ h4{
 	top: -6px;
 	right:-6px
 }
-
 .hot-wrap .hot{
 	position: absolute;
 	top: 15px;
@@ -588,7 +589,7 @@ h4{
 	color: #fff;
 }
 
-/* 搜索條 */
+/* 搜索區塊 */
 .search{
 	margin: 0 1%;
 }
@@ -597,13 +598,13 @@ h4{
 	justify-content: space-between;
 	align-items: center;
 }
-.search-term{
+.search-bar{
 	width: 60%;
 	border: 2px solid #3D1101;
 	display: flex;
 }
 
-.search-bar{
+.search-input{
 	width: 95%;
 	border: none;
 	background-color: #efe9e7;
@@ -615,11 +616,11 @@ h4{
 .search-btn i{
 	color: #fff;
 	font-size: 19px;
-	padding: 5px 0;
+	margin-left: 10px;
 }
 @media(max-width:576px){
-	.search-term{
-		
+	.search-bar{
+		width: 90%;
 	}
 }
 /* 購物車 */
@@ -632,8 +633,9 @@ h4{
 }
 .pay i{
 	font-size: 27px;
-	
+	margin-left: 10px;
 }
+/* 購物車項目 */
 .pay span{
 	background: #ff0000;
 	border-radius: 50%;
@@ -645,6 +647,11 @@ h4{
 	right: -5px;
 	width: 18px;
 	height: 18px;
+}
+@media(max-width:576px){
+	.pay h6{
+		display: none;
+	}
 }
 
 
